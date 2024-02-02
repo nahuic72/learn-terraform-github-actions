@@ -12,6 +12,13 @@ terraform {
       version = "3.4.3"
     }
   }
+  backend "remote" {
+    organization = "joseCompany"
+
+    workspaces {
+      name = "otroCICD"
+    }
+  }
   required_version = ">= 1.1.0"
 }
 
